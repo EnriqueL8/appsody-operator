@@ -178,6 +178,7 @@ func updateTest(t *testing.T, f *framework.Framework, appsodyApplication *appsod
 
 	hpa = getHPA(hpa, t, f, options2)
 
+	time.Sleep(180 * time.Second)
 	err = checkValues(hpa, t, 2, 3, 30)
 	if err != nil {
 		t.Log("Error: There should be an update since the values have been updated.")

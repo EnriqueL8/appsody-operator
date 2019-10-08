@@ -9,5 +9,5 @@ cd openshift-origin-clien*
 sudo mv oc kubectl /usr/local/bin/
 
 # Start a cluster and login
-oc cluster up --skip-registry-check=true
-oc login -u system:admin
+#oc cluster up --skip-registry-check=true
+oc login --token $CLUSTER_TOKEN $CLUSTER_URL
